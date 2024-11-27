@@ -288,8 +288,6 @@ orderInfoBtn.addEventListener("click", function(e){
       document.querySelector(`[data-message="${keys}"]`).textContent = errors[keys]
     })
     alert("請輸入正確訂單資料");
-    getCartData();
-    orderForm.reset();
     return;
   }
 
@@ -298,7 +296,7 @@ orderInfoBtn.addEventListener("click", function(e){
   const customerEmail = document.querySelector('#customerEmail').value;
   const customerAddress = document.querySelector('#customerAddress').value;
   const tradeWay = document.querySelector('#tradeWay').value;
-  
+
   axios.post(`https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/orders`,{
     "data": {
     "user": {
