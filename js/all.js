@@ -293,6 +293,12 @@ orderInfoBtn.addEventListener("click", function(e){
     return;
   }
 
+  const customerName = document.querySelector('#customerName').value;
+  const customerPhone = document.querySelector('#customerPhone').value;
+  const customerEmail = document.querySelector('#customerEmail').value;
+  const customerAddress = document.querySelector('#customerAddress').value;
+  const tradeWay = document.querySelector('#tradeWay').value;
+  
   axios.post(`https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/orders`,{
     "data": {
     "user": {
