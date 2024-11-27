@@ -288,6 +288,8 @@ orderInfoBtn.addEventListener("click", function(e){
     Object.keys(errors).forEach(keys =>{
       document.querySelector(`[data-message="${keys}"]`).textContent = errors[keys]
       alert("請輸入正確訂單資料");
+      getCartData();
+      orderForm.reset();
       return;
     })
   }
