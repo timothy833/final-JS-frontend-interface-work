@@ -287,11 +287,11 @@ orderInfoBtn.addEventListener("click", function(e){
     // console.log(Object.keys(errors));
     Object.keys(errors).forEach(keys =>{
       document.querySelector(`[data-message="${keys}"]`).textContent = errors[keys]
-      alert("請輸入正確訂單資料");
-      getCartData();
-      orderForm.reset();
-      return;
     })
+    alert("請輸入正確訂單資料");
+    getCartData();
+    orderForm.reset();
+    return;
   }
 
   axios.post(`https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/orders`,{
