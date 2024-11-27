@@ -287,22 +287,11 @@ orderInfoBtn.addEventListener("click", function(e){
     // console.log(Object.keys(errors));
     Object.keys(errors).forEach(keys =>{
       document.querySelector(`[data-message="${keys}"]`).textContent = errors[keys]
+      alert("請輸入正確訂單資料");
+      return;
     })
   }
 
-
-
-
-
-  const customerName = document.querySelector('#customerName').value;
-  const customerPhone = document.querySelector('#customerPhone').value;
-  const customerEmail = document.querySelector('#customerEmail').value;
-  const customerAddress = document.querySelector('#customerAddress').value;
-  const tradeWay = document.querySelector('#tradeWay').value;
-  if( customerName == "" || customerPhone == "" || customerEmail==""|| customerAddress==""|| tradeWay==""){
-    alert("請輸入正確訂單資料");
-    return;
-  }
   axios.post(`https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/orders`,{
     "data": {
     "user": {
