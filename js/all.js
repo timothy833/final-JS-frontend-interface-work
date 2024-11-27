@@ -270,7 +270,6 @@ const orderInfoBtn = document.querySelector(".orderInfo-btn");
 
 orderInfoBtn.addEventListener("click", function(e){
   e.preventDefault();
-  console.log(cartData);
   if(cartData.carts.length == 0){
     alert("請將商品加入購物車");
     return;
