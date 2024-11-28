@@ -236,7 +236,7 @@ const validationRule = {
       message: "^姓名必填"
     },format:{
       pattern: /^[a-zA-Z\u4e00-\u9fa5\s]+$/,
-      message: "姓名只能包含中文字、英文字母或空格"
+      message: "^姓名只能包含中文字、英文字母或空格"
     }
   },
   電話: {
@@ -262,11 +262,11 @@ const validationRule = {
       message: "^寄送地址必填"
     },format:{
       pattern: /^[a-zA-Z0-9\u4e00-\u9fa5\s#\-]+$/,
-      message: "地址只能包含中文字、英文字母、數字、空格，以及 # 和 - 符號"
+      message: "^地址只能包含中文字、英文字母、數字、空格，以及 # 和 - 符號"
     },length:{
       minimum: 5,
       maximum: 100,
-      message: "地址必須介於 5 到 100 個字元之間"
+      message: "^地址必須介於 5 到 100 個字元之間"
     }
   }
 }
