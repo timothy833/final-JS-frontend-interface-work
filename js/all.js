@@ -120,16 +120,16 @@ function getCartData(){
   axios.get(`https://livejs-api.hexschool.io/api/livejs/v1/customer/${api_path}/carts`).then(function(res){
     
     cartData = res.data;
+    //總金額顯示調整
+    const finalTotal = document.querySelector(".finalTotal");
+    finalTotal.textContent = cartData.finalTotal;
+
     if(cartData.carts.length == 0){
       cartList.innerHTML = `<tr>
                               <td colspan="5"   class="shopping-notice" >購物車沒有任何商品</td>
                             </tr>`
       return
-    }
-    
-    //總金額顯示調整
-    const finalTotal = document.querySelector(".finalTotal");
-    finalTotal.textContent = cartData.finalTotal
+    } 
     
     let cartProduct = "";
     
